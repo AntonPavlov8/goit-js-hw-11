@@ -12,11 +12,13 @@
 
 <body>
   <form class="search-form" id="search-form">
-    <input type="text" name="searchQuery" autocomplete="off" placeholder="Search images..." />
-    <button type="submit">Search</button>
+    <input type="text" name="searchQuery" autocomplete="off" placeholder="Search images..." class="search-input" />
+    <button type="submit" class="searchBt" disabled>Search</button>
   </form>
-  <div class="photoList"></div>
-  <button class="loadMoreBt">Load More</button>
+  <ul class="photoList"></ul>
+  <div class="loadMoreBtContainer">
+    <button class="loadMoreBt">Load More</button>
+  </div>
   <script src="index.js" type="module"></script>
 </body>
 

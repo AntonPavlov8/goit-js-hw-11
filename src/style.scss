@@ -1,4 +1,44 @@
+.search-form {
+  top: 16px;
+  position: absolute;
+  margin-left: 48px;
+  width: 280px;
+  .search-input {
+    position: absolute;
+    z-index: 2;
+    border: 2px #4298e9 solid;
+    border-radius: 16px;
+    background-color: #fff;
+    width: 200px;
+    padding: 12px 24px;
+    &::placeholder {
+      color: #646464;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  .searchBt {
+    cursor: pointer;
+    transition-duration: 300ms;
+    z-index: 1;
+    position: absolute;
+    right: 140px;
+    width: 130px;
+    padding: 12px 12px;
+    text-align: right;
+    border: 2px #4298e9 solid;
+    border-radius: 16px;
+    background-color: #fff;
+    color: #5e85a9;
+  }
+}
+.active {
+  transform: translateX(130px);
+}
 .photoList {
+  margin: 96px;
+  margin-bottom: 32px;
   padding: 0;
   list-style: none;
   display: flex;
@@ -15,6 +55,10 @@
   -moz-box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.2);
 
   width: 100%;
+
+  a {
+    width: inherit;
+  }
   img {
     width: inherit;
   }
@@ -23,7 +67,15 @@
     font-size: 10px;
   }
 }
-
-.loadMoreBt {
+.loadMoreBtContainer {
+  width: 100%;
   display: none;
+  justify-content: center;
+}
+.loadMoreBt {
+  margin: 24px;
+  padding: 8px 48px;
+  background-color: #4298e9;
+  color: #fff;
+  border: none;
 }
